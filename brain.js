@@ -48,6 +48,9 @@ createDots();
 
 intervalId = setInterval(nextSlide, intervalDuration);
 
+
+
+
 // Uncomment the following lines if you want to stop the automatic sliding when a button is clicked
 // document.getElementById('prevButton').addEventListener('click', () => clearInterval(intervalId));
 // document.getElementById('nextButton').addEventListener('click', () => clearInterval(intervalId));

@@ -4,6 +4,9 @@ body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+
+
+
 .navbar {
   padding: 10px;
   text-align: center;
@@ -58,6 +61,16 @@ body {
   border-bottom: 2px solid white;
   padding-bottom: 2px;
 }
+
+/* Add a slight shadow to navbar when scrolling */
+.navbar.scrolled {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles for screens smaller than 768px (iPhone 6 landscape and smaller) */
+
+
+
 #carousel-container {
   position: relative;
   width: 100%; /* Fill the entire width of the viewport */
@@ -105,48 +118,99 @@ button {
 }
 
 
+/* Responsive styles for screens smaller than 768px (iPhone 6 and smaller) */
+/* Responsive styles for screens smaller than 768px (iPhone 6 and smaller) */
+@media (max-width: 768px) {
+  .navbar-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .nav-links.left,
+  .nav-links.right {
+    margin: 0;
+  }
+
+  .nav-dropdown {
+    position: static;
+    width: auto;
+    display: none;
+    background-color: transparent;
+  }
+
+  .nav-links.left:hover .nav-dropdown,
+  .nav-links.right:hover .nav-dropdown {
+    display: none;
+  }
+
+  .nav-links a {
+    margin: 5px 0;
+  }
+
+  #carousel-container {
+    height: 300px; /* Adjust the height as needed for small screens */
+  }
+}
+
+
+
+
+
+
+
 
 /*SECOND SECTOR/*/
 
 
+/* About section styles */
+
 .about-section {
   background-color: black; /* Set a background color for the about section */
-  padding: 40px 0; /* Add some padding to the about section */
+  padding: 40px 20px; /* Adjust padding for smaller screens */
 }
 
-.about-section h1{
-color: #8A6000;
-font-size: 60px;
-font-weight: 400;
-line-height: 1.1em;
-letter-spacing: .02em;
-text-transform: uppercase;
-text-align: center;
+.about-section h1 {
+  color: #8A6000;
+  font-size: 36px; /* Adjust font size for smaller screens */
+  font-weight: 400;
+  line-height: 1.1em;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .about-content {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+  justify-content: center;
   align-items: center;
 }
 
 .logo-container img {
-  max-width: 100%; /* Make sure the logo doesn't exceed its container */
+  max-width: 100%;
+  margin: 20px 0; /* Add space around the logo on smaller screens */
 }
 
 .about-us {
   flex: 1;
-  margin-left: 40px; /* Adjust the margin to add space between the logo and text */
+  margin-left: 0; /* Remove margin on smaller screens */
 }
 
 /* Additional styles for the about section (customize as needed) */
 .about-us h2 {
-  font-size: 40px;
+  font-size: 24px; /* Adjust font size for smaller screens */
   margin-bottom: 10px;
   background-color: #D6a100;
-  width: 40rem;
+  width: 100%; /* Adjust width for smaller screens */
   font-weight: lighter;
   font-family: Raleway;
   font-weight: 100;
@@ -159,4 +223,52 @@ text-align: center;
 .about-us p {
   font-size: 16px;
   color: #555;
+}
+
+/* Additional styles for the video intro */
+.video-intro {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.video-intro iframe {
+  width: 100%;
+  height: 200px; /* Adjust height for smaller screens */
+}
+
+
+
+
+
+
+
+/* Add styles for the toggle icon */
+.toggle-icon {
+  display: none; /* Hide by default */
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+/* Show the toggle icon on small screens */
+@media (max-width: 768px) {
+  .toggle-icon {
+    display: block;
+  }
+
+  /* Hide the navigation links by default on small screens */
+  .nav-links {
+    display: none;
+  }
+
+  /* Show the navigation links when the 'show' class is applied */
+  .nav-links.show {
+    display: flex;
+  }
 }

@@ -6,12 +6,17 @@
   <title>Automatic Carousel with Transparent Navbar</title>
   <link rel="stylesheet" href="brain.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 
 </head>
 <body>
 
   <nav class="navbar">
     <div class="navbar-content">
+      <div class="toggle-icon" id="toggleNavButton">
+        <i class="fas fa-bars"></i>
+      </div>
       <ul class="nav-links left">
         <li><a href="#">ABOUT</a></li>
         <li><a href="#">WEDDINGS</a></li>
@@ -73,6 +78,16 @@
 
 
 <script src="brain.js"></script>
+
+<script>
+   const toggleNavButton = document.getElementById('toggleNavButton');
+    const navbar = document.getElementById('navbar');
+    const navLinks = document.getElementById('navLinks');
+
+    toggleNavButton.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+</script>
 
 </body>
 </html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automatic Carousel with Transparent Navbar</title>
+  <link rel="stylesheet" href="brain.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-content">
+      <ul class="nav-links left">
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">WEDDINGS</a></li>
+        <li><a href="#">VIDEO</a></li>
+      </ul>
+  
+      <div class="logo"><img src="/images/brain works.PNG" alt="logo"></div>
+  
+      <ul class="nav-links right">
+        <li><a href="#">POTRAITS</a></li>
+        <li><a href="#">CONTACTS</a></li>
+        <li><a href="#">STORIES</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<div id="carousel-container">
+  <div id="carousel">
+    <!-- Add your 16 slides here -->
+    <div class="slide"><img src="/images/IMG_0006.jpg" alt="Slide 1"></div>
+    <div class="slide"><img src="/images/IMG_0009.jpg" alt="Slide 2"></div>
+    <div class="slide"><img src="/images/IMG_0015.jpg" alt="Slide 3"></div>
+
+    <div class="slide"><img src="/images/IMG_0048.jpg" alt="Slide 4"></div>
+    <div class="slide"><img src="/images/IMG_9990.jpg" alt="Slide 5"></div>
+    <div class="slide"><img src="/images/IMG_0048.jpg" alt="Slide 6"></div>
+    <div class="slide"><img src="/images/IMG_0048.jpg" alt="Slide 7"></div>
+    <div class="slide"><img src="/images/IMG_0048.jpg" alt="Slide 8"></div>
+    <div class="slide"><img src="/images/IMG_0048.jpg" alt="Slide 9"></div>
+    <div class="slide"><img src="/images/IMG_0048.jpg" alt="Slide 10"></div>
+    <div class="slide"><img src="/images/IMG_0048.jpg" alt="Slide 11"></div>
+    <div class="slide"><img src="/images/IMG_0048.jpg" alt="Slide 12"></div>
+    <div class="slide"><img src="/images/IMG_0048.jpg" alt="Slide 13"></div>
+
+  </div>
+</div>
+
+<div id="dot-container"></div>
+
+<button id="prevButton" onclick="prevSlide()">Previous</button>
+<button id="nextButton" onclick="nextSlide()">Next</button>
+
+
+<div class="about-section">
+  <h1>-OH HELLO-</h1>
+  <div class="about-content">
+    
+    <div class="video-intro">
+      <!-- Your video intro goes here -->
+      <iframe width="560" height="315" src="/images/RENDER THIS.mp4?autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="about-us">
+      <h2>WE ARE BRAIN WORKS STUDIO</h2>
+      <p>Your company's description goes here. Provide information about your mission, values, and services.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<script src="brain.js"></script>
+
+</body>
+</html>
